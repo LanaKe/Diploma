@@ -1,0 +1,4 @@
+*.safetensors
+*.png
+*.jpg
+runs/
