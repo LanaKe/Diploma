@@ -156,7 +156,7 @@ def evaluate(config, epoch, pipeline):
     #images.save('slika.png')
     global stevec
     stevec+=1
-    images.save(f'test3/output_{stevec}.png')
+    images.save(f'test422/output_{stevec}.png')
     
     ''' Make a grid out of the images
     image_grid = make_image_grid(images, rows=4, cols=4)

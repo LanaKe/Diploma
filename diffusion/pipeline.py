@@ -125,7 +125,7 @@ class DDPMPipeline(DiffusionPipeline):
         #print("IMAGE shape:", type(image.shape), image_shape.shape)
         #print("type od tshirt v pipeline:", type(tshirt))
         #print("pose shape v pipeline", pose.shape)
-        input = torch.cat((image, tshirt.unsqueeze(0), pose.unsqueeze(0)), dim=1)
+        
         #print("to je type on image:", type(image))
         #print("pa še shape od image:", image.shape)
 
@@ -133,15 +133,16 @@ class DDPMPipeline(DiffusionPipeline):
         self.scheduler.set_timesteps(num_inference_steps)
 
         for t in self.progress_bar(self.scheduler.timesteps):
+            input = torch.cat((image, tshirt.unsqueeze(0), pose.unsqueeze(0)), dim=1)
             # 1. predict noise model_output
             model_output = self.unet(input, t).sample
             #print("model:", type(model_output), model_output.shape)
             # 2. compute previous image: x_t -> x_t-1
-            image = self.scheduler.step(model_output, t, input, generator=generator).prev_sample
+            image = self.scheduler.step(model_output, t, image, generator=generator).prev_sample
             #print("image output", image.shape)
     
 
-        
+        print("prisli smo do konca loopa", image.shape, model_output.shape)
         #image = (image / 2 + 0.5).clamp(0, 1)
         #image = image.cpu().permute(0, 2, 3, 1).numpy()
         to_pil = ToPILImage()
