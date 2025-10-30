@@ -1,0 +1,23 @@
+srun: error: pyxis: ignoring --container-mounts because neither --container-image nor --container-name is set
+srun: error: pyxis: ignoring --container-workdir because neither --container-image nor --container-name is set
+2025-06-12 07:24:55.953085: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749713095.986072 1261021 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749713095.994741 1261021 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-06-12 07:24:56.032969: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+['DataLoader', 'Dataset', 'Image', 'MyDataSet', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'os', 'transforms']
+2032 prompts loaded from captions.csv
+['Black Long Sleeve T-shirts', 'Red Long Sleeve T-shirts', 'Pink Short Sleeve T-shirts', 'Wine Short Sleeve T-shirts', 'Lavender Sleeveless Shirts', 'Navy Long Sleeve T-shirts', 'Purple Short Sleeve T-shirts', 'Black Short Sleeve T-shirts', 'Black Long Sleeve Sweater', 'Navy Short Sleeve T-shirts', 'Green Cropped Sleeve Blouse', 'Black Short Sleeve T-shirts', 'No item category', 'White Short Sleeve T-shirts', 'Black Cropped Sleeve T-shirts', 'Grey Long Sleeve T-shirts', 'Orange Long Sleeve Blouse', 'Green Sleeveless Vest', 'Grey Long Sleeve T-shirts', 'White Long Sleeve T-shirts']
+Dataset created with 2032 images.
+Real images loaded 127
+Dataset created with 2032 images.
+Dataset created with 2032 images.
+Dataset created with 2032 images.
+Dataset created with 2032 images.
+naložene so, začnimo
+It looks like you are trying to rescale already rescaled images. If the input images have pixel values between 0 and 1, set `do_rescale=False` to avoid rescaling them again.
+Average CLIP Score over Folder 2032 images: 21.5415
+Average CLIP Score over Folder 2032 images: 21.5340
+Average CLIP Score over Folder 2032 images: 21.5054
+Average CLIP Score over Folder 2032 images: 21.5129

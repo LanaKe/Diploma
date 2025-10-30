@@ -1,0 +1,18 @@
+srun: error: pyxis: ignoring --container-mounts because neither --container-image nor --container-name is set
+srun: error: pyxis: ignoring --container-workdir because neither --container-image nor --container-name is set
+2025-06-11 14:13:48.705661: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-06-11 14:13:48.717055: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749651228.729315 3366934 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749651228.732714 3366934 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-06-11 14:13:48.745637: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Real images loaded 3
+naložene so, začnimo
+Real images - Quality: 0.10125356912612915 Custom: 0.23742757737636566 Sharpness: 0.11800923198461533 Noisiness: 0.6132240891456604
+Real images - Quality: 0.09609151631593704 Custom: 0.23691266775131226 Sharpness: 0.11627988517284393 Noisiness: 0.5947324633598328
+Real images - Quality: 0.10385219007730484 Custom: 0.23777540028095245 Sharpness: 0.11906842142343521 Noisiness: 0.6047173142433167
+Folder - Quality: 0.1893247365951538, Custom: 0.21204499900341034, Sharpness: 0.27324366569519043, Noisiness: 0.5967106819152832
+Folder - Quality: 0.1513487696647644, Custom: 0.19788077473640442, Sharpness: 0.21878457069396973, Noisiness: 0.5772532224655151
+Folder - Quality: 0.09956198930740356, Custom: 0.19390083849430084, Sharpness: 0.21147385239601135, Noisiness: 0.5301183462142944
+Folder - Quality: 0.09418948739767075, Custom: 0.18826605379581451, Sharpness: 0.196426659822464, Noisiness: 0.5190895795822144

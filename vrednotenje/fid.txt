@@ -1,0 +1,25 @@
+srun: error: pyxis: ignoring --container-mounts because neither --container-image nor --container-name is set
+srun: error: pyxis: ignoring --container-workdir because neither --container-image nor --container-name is set
+Downloading: "https://github.com/toshas/torch-fidelity/releases/download/v0.2.0/weights-inception-2015-12-05-6726825d.pth" to /shared/home/lana.kejzar/.cache/torch/hub/checkpoints/weights-inception-2015-12-05-6726825d.pth
+  0%|          | 0.00/91.2M [00:00<?, ?B/s] 11%|█         | 10.1M/91.2M [00:00<00:01, 71.8MB/s] 19%|█▊        | 17.0M/91.2M [00:00<00:01, 66.6MB/s] 26%|██▌       | 23.4M/91.2M [00:00<00:01, 48.1MB/s] 31%|███▏      | 28.5M/91.2M [00:00<00:01, 41.9MB/s] 36%|███▌      | 32.8M/91.2M [00:00<00:01, 40.1MB/s] 42%|████▏     | 38.0M/91.2M [00:00<00:01, 43.9MB/s] 46%|████▋     | 42.4M/91.2M [00:01<00:01, 35.5MB/s] 52%|█████▏    | 47.0M/91.2M [00:01<00:01, 38.5MB/s] 56%|█████▌    | 51.0M/91.2M [00:01<00:01, 31.6MB/s] 65%|██████▌   | 59.6M/91.2M [00:01<00:00, 44.7MB/s] 71%|███████   | 64.6M/91.2M [00:01<00:00, 38.1MB/s] 77%|███████▋  | 69.9M/91.2M [00:01<00:00, 41.8MB/s] 82%|████████▏ | 74.5M/91.2M [00:01<00:00, 35.4MB/s] 87%|████████▋ | 79.6M/91.2M [00:02<00:00, 39.4MB/s] 92%|█████████▏| 84.0M/91.2M [00:02<00:00, 39.6MB/s] 99%|█████████▉| 90.1M/91.2M [00:02<00:00, 43.3MB/s]100%|██████████| 91.2M/91.2M [00:02<00:00, 42.0MB/s]
+torch.Size([11643, 3, 299, 299])
+torch.Size([315, 3, 299, 299])
+Traceback (most recent call last):
+  File "/shared/home/lana.kejzar/Diploma/vrednotenje/fidistance.py", line 48, in <module>
+    fid.update(real_images, real=True)
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/torchmetrics/metric.py", line 549, in wrapped_func
+    update(*args, **kwargs)
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/torchmetrics/image/fid.py", line 374, in update
+    features = self.inception(imgs)
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/torchmetrics/image/fid.py", line 156, in forward
+    out = self._torch_fidelity_forward(x)
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/torchmetrics/image/fid.py", line 79, in _torch_fidelity_forward
+    vassert(torch.is_tensor(x) and x.dtype == torch.uint8, "Expecting image as torch.Tensor with dtype=torch.uint8")
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/torch_fidelity/helpers.py", line 9, in vassert
+    raise ValueError(message)
+ValueError: Expecting image as torch.Tensor with dtype=torch.uint8
+srun: error: ana: task 0: Exited with exit code 1

@@ -1,0 +1,16 @@
+srun: error: pyxis: ignoring --container-mounts because neither --container-image nor --container-name is set
+srun: error: pyxis: ignoring --container-workdir because neither --container-image nor --container-name is set
+/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/torchmetrics/utilities/prints.py:43: UserWarning: Metric `Kernel Inception Distance` will save all extracted features in buffer. For large datasets this may lead to large memory footprint.
+  warnings.warn(*args, **kwargs)
+Real images loaded 127
+naložene so, začnimo
+FID score: 120.07306671142578
+FID score: 99.06639862060547
+FID score: 85.5889663696289
+FID score: 86.3549575805664
+zaključili smo FID
+KID score: (tensor(0.1102), tensor(0.0391))
+KID score: (tensor(0.0758), tensor(0.0316))
+KID score: (tensor(0.0705), tensor(0.0306))
+KID score: (tensor(0.0756), tensor(0.0312))
+zaključili smo KID
