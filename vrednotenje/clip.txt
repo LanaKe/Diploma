@@ -1,0 +1,17 @@
+srun: error: pyxis: ignoring --container-mounts because neither --container-image nor --container-name is set
+srun: error: pyxis: ignoring --container-workdir because neither --container-image nor --container-name is set
+2025-06-11 10:22:14.449702: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749637334.460542 1102639 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749637334.463965 1102639 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-06-11 10:22:14.477052: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Real images loaded 3
+naložene so, začnimo
+Real images - Quality: 0.23742590844631195 Custom: 0.10125342011451721
+Real images - Quality: 0.23691096901893616 Custom: 0.09609133005142212
+Real images - Quality: 0.23777389526367188 Custom: 0.1038520410656929
+Folder - Quality: 0.21204409003257751, Custom: 0.18932516872882843
+Folder - Quality: 0.1978798359632492, Custom: 0.1513492316007614
+Folder - Quality: 0.19389976561069489, Custom: 0.09956236928701401
+Folder - Quality: 0.18826502561569214, Custom: 0.09418981522321701

@@ -1,0 +1,28 @@
+srun: error: pyxis: ignoring --container-mounts because neither --container-image nor --container-name is set
+srun: error: pyxis: ignoring --container-workdir because neither --container-image nor --container-name is set
+/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/torchmetrics/utilities/prints.py:43: UserWarning: Metric `Kernel Inception Distance` will save all extracted features in buffer. For large datasets this may lead to large memory footprint.
+  warnings.warn(*args, **kwargs)
+2025-06-02 05:01:33.384562: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1748840493.413858 3272418 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1748840493.421853 3272418 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-06-02 05:01:33.464946: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Real images loaded 313
+naložene so, začnimo
+FID score: 83.52922821044922
+FID score: 55.74795150756836
+FID score: 25.454442977905273
+FID score: 25.75232696533203
+zaključili smo FID
+KID score: (tensor(0.0626), tensor(0.0288))
+KID score: (tensor(0.0316), tensor(0.0230))
+KID score: (tensor(0.0136), tensor(0.0136))
+KID score: (tensor(0.0129), tensor(0.0134))
+zaključili smo KID
+CLIPimage q a module je 0.8041200041770935
+CLIP Image Quality Assessment score MODULE: tensor([0.7361, 0.7831, 0.7507,  ..., 0.8553, 0.7393, 0.7070]), also povprečje je 0.7810247540473938
+CLIP Image Quality Assessment score MODULE: tensor([0.8118, 0.7026, 0.7813,  ..., 0.9128, 0.6953, 0.6373]), also povprečje je 0.7852208614349365
+CLIP Image Quality Assessment score MODULE: tensor([0.9102, 0.8089, 0.7763,  ..., 0.9549, 0.7911, 0.8866]), also povprečje je 0.8085185289382935
+CLIP Image Quality Assessment score MODULE: tensor([0.8363, 0.8489, 0.7793,  ..., 0.8533, 0.7467, 0.8155]), also povprečje je 0.8102206587791443
+zaključili smo CLIPimage q a module

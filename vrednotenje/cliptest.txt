@@ -1,0 +1,18 @@
+srun: error: pyxis: ignoring --container-mounts because neither --container-image nor --container-name is set
+srun: error: pyxis: ignoring --container-workdir because neither --container-image nor --container-name is set
+2025-06-11 09:58:36.291042: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749635916.302393 3738256 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749635916.305913 3738256 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-06-11 09:58:36.320326: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Real images loaded 4
+1
+naložene so, začnimo
+Velike DP - Quality: 0.1978798359632492 Custom: 0.1513492316007614
+CLIPImageQualityAssessment module je {'quality': tensor([0.5080, 0.2053, 0.1322, 0.2665, 0.4611, 0.3966, 0.2222, 0.1381]), 'noisiness': tensor([0.8511, 0.6222, 0.8095, 0.9453, 0.9056, 0.8116, 0.9353, 0.9806]), 'natural': tensor([0.9615, 0.6524, 0.7776, 0.9372, 0.7987, 0.8585, 0.7585, 0.9674])}
+Traceback (most recent call last):
+  File "/shared/home/lana.kejzar/Diploma/vrednotenje/clip.py", line 63, in <module>
+    average = quality.mean().item()
+AttributeError: 'Tensor' object has no attribute 'append'
+srun: error: apl: task 0: Exited with exit code 1

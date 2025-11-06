@@ -1,0 +1,47 @@
+srun: error: pyxis: ignoring --container-mounts because neither --container-image nor --container-name is set
+srun: error: pyxis: ignoring --container-workdir because neither --container-image nor --container-name is set
+2025-05-18 21:40:28.425924: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1747604428.459905 2140038 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1747604428.468113 2140038 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-05-18 21:40:28.507764: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1747604797.884916 2140038 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 20846 MB memory:  -> device: 0, name: NVIDIA L4, pci bus id: 0000:01:00.0, compute capability: 8.9
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1747605492.245300 2142069 service.cc:148] XLA service 0x7ff6b0254d10 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1747605492.245336 2142069 service.cc:156]   StreamExecutor device (0): NVIDIA L4, Compute Capability 8.9
+2025-05-18 21:58:12.310371: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+E0000 00:00:1747605492.847711 2142069 cuda_dnn.cc:522] Loaded runtime CuDNN library: 9.1.0 but source was compiled with: 9.3.0.  CuDNN library needs to have matching major version and equal or higher minor version. If using a binary install, upgrade your CuDNN library.  If building from sources, make sure the library loaded at runtime is compatible with the version specified during compile configuration.
+E0000 00:00:1747605492.903926 2142069 cuda_dnn.cc:522] Loaded runtime CuDNN library: 9.1.0 but source was compiled with: 9.3.0.  CuDNN library needs to have matching major version and equal or higher minor version. If using a binary install, upgrade your CuDNN library.  If building from sources, make sure the library loaded at runtime is compatible with the version specified during compile configuration.
+2025-05-18 21:58:12.912920: W tensorflow/core/framework/op_kernel.cc:1841] OP_REQUIRES failed at xla_ops.cc:577 : FAILED_PRECONDITION: DNN library initialization failed. Look at the errors above for more details.
+2025-05-18 21:58:12.912998: I tensorflow/core/framework/local_rendezvous.cc:405] Local rendezvous is aborting with status: FAILED_PRECONDITION: DNN library initialization failed. Look at the errors above for more details.
+	 [[{{node StatefulPartitionedCall}}]]
+Prepared originalne slike (11643, 299, 299, 3)
+Prepared densepose slike (2032, 299, 299, 3)
+Prepared openpose slike (2032, 299, 299, 3)
+Prepared procesirane (11643, 299, 299, 3) (2032, 299, 299, 3) (2032, 299, 299, 3)
+Traceback (most recent call last):
+  File "/shared/home/lana.kejzar/Diploma/vrednotenje/fid.py", line 113, in <module>
+    fid = calculate_fid(model, images, densepose)
+  File "/shared/home/lana.kejzar/Diploma/vrednotenje/fid.py", line 70, in calculate_fid
+    act1 = model.predict(images1)
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.FailedPreconditionError: Graph execution error:
+
+Detected at node StatefulPartitionedCall defined at (most recent call last):
+  File "/shared/home/lana.kejzar/Diploma/vrednotenje/fid.py", line 113, in <module>
+
+  File "/shared/home/lana.kejzar/Diploma/vrednotenje/fid.py", line 70, in calculate_fid
+
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/keras/src/utils/traceback_utils.py", line 117, in error_handler
+
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/keras/src/backend/tensorflow/trainer.py", line 559, in predict
+
+  File "/shared/home/lana.kejzar/Diploma/myenv/lib/python3.10/site-packages/keras/src/backend/tensorflow/trainer.py", line 256, in one_step_on_data_distributed
+
+DNN library initialization failed. Look at the errors above for more details.
+	 [[{{node StatefulPartitionedCall}}]] [Op:__inference_one_step_on_data_distributed_6403]
+srun: error: apl: task 0: Exited with exit code 1
